@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Multiplos de:
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="contadores">
+    <div class="contador2">
+      <h2>Valor actual</h2>
+      <h1>{{ contador2 }}</h1>
+
+      <ion-button color="danger" [disabled]="contador2==0" (click)="disminuir2()"> - Disminuir
+      </ion-button>
+
+      <ion-button (click)="aumentar2()"> + Aumentar </ion-button>
+
+      <ion-button expand="block" color="medium" (click)="reiniciar2()"> - Reiniciar </ion-button>
+
+    </div>
+
+    <div class="contador3">
+      <h2>Valor actual</h2>
+      <h1>{{ contador3 }}</h1>
+
+      <ion-button color="danger" [disabled]="contador3==0" (click)="disminuir3()"> - Disminuir
+      </ion-button>
+
+      <ion-button (click)="aumentar3()"> + Aumentar </ion-button>
+
+      <ion-button expand="block" color="medium" (click)="reiniciar3()"> - Reiniciar </ion-button>
+
+    </div>
+
+    <div class="contador5">
+      <h2>Valor actual</h2>
+      <h1>{{ contador5 }}</h1>
+
+      <ion-button color="danger" [disabled]="contador5==0" (click)="disminuir5()"> - Disminuir
+      </ion-button>
+
+      <ion-button (click)="aumentar5()"> + Aumentar </ion-button>
+
+      <ion-button expand="block" color="medium" (click)="reiniciar5()"> - Reiniciar </ion-button>
+
+    </div>
+
+    <div class="contador7">
+      <h2>Valor actual</h2>
+      <h1>{{ contador7 }}</h1>
+
+      <ion-button color="danger" [disabled]="contador7==0" (click)="disminuir7()"> - Disminuir
+      </ion-button>
+
+      <ion-button (click)="aumentar7()"> + Aumentar </ion-button>
+
+      <ion-button expand="block" color="medium" (click)="reiniciar7()"> - Reiniciar </ion-button>
+
+    </div>
+
+    <div class="contador10">
+      <h2>Valor actual</h2>
+      <h1>{{ contador5 }}</h1>
+
+      <ion-button color="danger" [disabled]="contador10==0" (click)="disminuir5()"> - Disminuir
+      </ion-button>
+
+      <ion-button (click)="aumentar10()"> + Aumentar </ion-button>
+
+      <ion-button expand="block" color="medium" (click)="reiniciar10()"> - Reiniciar </ion-button>
+
+    </div>
+  </div>
+
+</ion-content>
