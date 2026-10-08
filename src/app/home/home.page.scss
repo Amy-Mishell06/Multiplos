@@ -1,14 +1,105 @@
-.contadores {
-    max-width: 420px;
-    margin: 60px auto;
-    text-align: center;
-}
-
-h1 {
-    font-size: 80px;
-    margin: 30px 0;
+ion-toolbar {
+  --background: #7b3a6e;
+  --color: #ffffff;
 }
 
 ion-content {
-    --background: #a195a7; 
+  --background: #ffffff;
+}
+
+.contadores {
+  max-width: 440px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+/* Cada contador separado por una línea fina */
+.contadores > div {
+  text-align: center;
+  padding: 24px 8px;
+  border-bottom: 1px solid #e6e0ee;
+}
+
+.contadores > div:last-child {
+  border-bottom: none;
+}
+
+/* Título pequeño */
+.contadores h2 {
+  color: #292929;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Número con degradado morado, celeste y rosita */
+/* Número grande */
+.contadores h1 {
+  font-size: 64px;
+  font-weight: 800;
+  margin: 8px 0 16px;
+}
+
+/* Un color distinto para el número de cada contador */
+.contadores h1  { color: #7b3a6e; }  /* morado */
+
+/* Todos los botones */
+/* Disminuir: rojo suave */
+.contadores ion-button[color="danger"] {
+  --ion-color-base: #ffc9cf !important;
+  --ion-color-contrast: #a4161a !important;
+}
+
+/* Aumentar: azul suave */
+.contadores ion-button:not([color]):not([expand]) {
+  --background: #c7dfff;
+  --color: #1d4e89;
+}
+
+/* Reiniciar: gris suave */
+.contadores ion-button[color="medium"] {
+  --ion-color-base: #eceaf0 !important;
+  --ion-color-contrast: #555555 !important;
+}
+
+/* Disminuir y Aumentar del mismo ancho, lado a lado */
+.contadores ion-button:not([expand]) {
+  width: 48%;
+}
+
+/* Reiniciar más suave */
+.contadores ion-button[color="medium"] {
+  --background: #eceaf0;
+  --color: #555555;
+}
+
+/* Botón de primos con el mismo degradado */
+/* Botón de primos morado */
+/* Números primos: morado suave */
+.btn-primos {
+  --background: #f0dcea;
+  --color: #7b3a6e;
+}
+
+/* Resultado de primos */
+.primos {
+  color: #7b3a6e;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.7;
+  margin: 12px 0 0;
+}
+
+.nombre {
+  text-align: center;
+  color: #252525;
+  font-size: 16px;
+  margin: 8px 0 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e6e0ee;
+
+  strong {
+    color: #7b3a6e;
+  }
 }

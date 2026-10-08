@@ -7,18 +7,24 @@ import {
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButton],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton],
 })
 export class HomePage {
   constructor() { }
-  nombreEstudiante: string = "Amy Díaz";
+
+  nombreEstudiante: string = 'Amy Díaz';
+
   contador2: number = 0;
   contador3: number = 0;
   contador5: number = 0;
   contador7: number = 0;
   contador10: number = 0;
 
-  resultadoPrimos: string = '';
+  primos2: string = '';
+  primos3: string = '';
+  primos5: string = '';
+  primos7: string = '';
+  primos10: string = '';
 
   aumentar2() { this.contador2 += 2; }
   aumentar3() { this.contador3 += 3; }
@@ -26,49 +32,22 @@ export class HomePage {
   aumentar7() { this.contador7 += 7; }
   aumentar10() { this.contador10 += 10; }
 
-  disminuir2(): void {
-    this.contador2 -=2;
-  }
+  disminuir2() { this.contador2 -= 2; }
+  disminuir3() { this.contador3 -= 3; }
+  disminuir5() { this.contador5 -= 5; }
+  disminuir7() { this.contador7 -= 7; }
+  disminuir10() { this.contador10 -= 10; }
 
-  disminuir3(): void {
-    this.contador3 -=3;
-  }
+  reiniciar2() { this.contador2 = 0; }
+  reiniciar3() { this.contador3 = 0; }
+  reiniciar5() { this.contador5 = 0; }
+  reiniciar7() { this.contador7 = 0; }
+  reiniciar10() { this.contador10 = 0; }
 
-  disminuir5(): void {
-    this.contador5 -=5;
-  }
+  calcularPrimos(inicio: number): string {
+    const lista: number[] = [];
 
-  disminuir7(): void {
-    this.contador7 -=7;
-  }
-
-  disminuir10(): void {
-    this.contador10 -=10;
-  }
-
-  reiniciar2(): void {
-    this.contador2 = 0;
-  }
-
-  reiniciar3(): void {
-    this.contador3 = 0;
-  }
-
-  reiniciar5(): void {
-    this.contador5 = 0;
-  }
-
-  reiniciar7(): void {
-    this.contador7 = 0;
-  }
-
-  reiniciar10(): void {
-    this.contador10 = 0;
-  }
-
-  mostrarPrimos(): void {
-    const primos: number[] = [];
-    for (let i = 2; i <= 50; i++) {
+    for (let i = inicio; i <= 60; i++) {
       let esPrimo = true;
       for (let j = 2; j < i; j++) {
         if (i % j === 0) {
@@ -77,9 +56,16 @@ export class HomePage {
         }
       }
       if (esPrimo) {
-        primos.push(i);
+        lista.push(i);
       }
     }
-    this.resultadoPrimos = primos.join(', ');
+
+    return lista.join(', ');
   }
+
+  mostrarPrimos2() { this.primos2 = this.primos2 ? '' : this.calcularPrimos(2); }
+  mostrarPrimos3() { this.primos3 = this.primos3 ? '' : this.calcularPrimos(3); }
+  mostrarPrimos5() { this.primos5 = this.primos5 ? '' : this.calcularPrimos(5); }
+  mostrarPrimos7() { this.primos7 = this.primos7 ? '' : this.calcularPrimos(7); }
+  mostrarPrimos10() { this.primos10 = this.primos10 ? '' : this.calcularPrimos(10); }
 }
